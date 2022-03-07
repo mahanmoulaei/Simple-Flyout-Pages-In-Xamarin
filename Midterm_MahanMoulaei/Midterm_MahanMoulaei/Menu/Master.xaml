@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Midterm_MahanMoulaei="clr-namespace:Midterm_MahanMoulaei"
+            x:Class="Midterm_MahanMoulaei.Menu.Master">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Master Page">
+            <StackLayout>
+                <Button Text="Question 1" x:Name="button1" Clicked="button_Clicked"/>
+                <Button Text="Question 2" x:Name="button2" Clicked="button_Clicked"/>
+                <Button Text="Question 3" x:Name="button3" Clicked="button_Clicked"/>
+                <Button Text="Question 4 (I did this as extra)" x:Name="button4" Clicked="button_Clicked"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <Midterm_MahanMoulaei:MainPage></Midterm_MahanMoulaei:MainPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

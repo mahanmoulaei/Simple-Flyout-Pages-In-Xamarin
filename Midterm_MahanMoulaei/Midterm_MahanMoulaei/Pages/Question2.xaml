@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Midterm_MahanMoulaei.Pages.Question2">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Spacing="30" Margin="10">
+            <Entry x:Name="txtEmail" Placeholder="Email..."/>
+            <Entry x:Name="txtPassword" Placeholder="Password..." IsPassword="True"/>
+            <Button Text="Login" Clicked="Button_Clicked"/>
+            <Label x:Name="lblResult" TextTransform="Uppercase" FontSize="25" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

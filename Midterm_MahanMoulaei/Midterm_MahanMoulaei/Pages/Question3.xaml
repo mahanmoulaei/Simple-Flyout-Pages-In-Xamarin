@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Midterm_MahanMoulaei.Pages.Question3">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#403D3A">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Text="0.0" TextColor="#FDFBF8" HorizontalOptions="Center" FontSize="30" x:Name="lblBMI"/>
+
+            <Frame Grid.Row="3" Grid.RowSpan="3" BackgroundColor="#FDFBF8" CornerRadius="15">
+                <StackLayout>
+                    <Label Text="Height" TextTransform="Uppercase" FontSize="30" Margin="0, 0, 5, 0"/>
+                    <Label Text="0.0 cm" TextTransform="Lowercase" FontSize="20" Margin="0, 0, 15, 0" x:Name="lblHeight"/>
+                    <Slider x:Name="heightSlider" Maximum="300" Minimum="20" BackgroundColor="#f0f0f0" ValueChanged="heightSlider_ValueChanged"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="7" Grid.RowSpan="3" BackgroundColor="#FDFBF8" CornerRadius="15">
+                <StackLayout>
+                    <Label Text="Weight" TextTransform="Uppercase" FontSize="30" Margin="0, 0, 5, 0"/>
+                    <Label Text="0.0 kg" TextTransform="Lowercase" FontSize="20" Margin="0, 0, 15, 0" x:Name="lblWeight"/>
+                    <Slider x:Name="weightSlider" Maximum="300" Minimum="1" BackgroundColor="#f0f0f0" ValueChanged="weightSlider_ValueChanged"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Grid.Row="11" Grid.RowSpan="2" Text="CALCULATE BMI" CornerRadius="15" BackgroundColor="#CACE3E" Clicked="Button_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
