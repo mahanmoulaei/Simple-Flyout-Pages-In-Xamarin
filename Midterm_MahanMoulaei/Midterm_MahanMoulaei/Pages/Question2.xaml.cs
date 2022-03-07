@@ -24,21 +24,24 @@ namespace Midterm_MahanMoulaei.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if (myDict.ContainsKey(txtEmail.Text))
+            if (!string.IsNullOrEmpty(txtEmail.Text))
             {
-                if (txtPassword.Text == myDict[txtEmail.Text])
+                if (myDict.ContainsKey(txtEmail.Text))
                 {
-                    showResult("You are logged", Color.Green);
+                    if (txtPassword.Text == myDict[txtEmail.Text])
+                    {
+                        showResult("You are logged", Color.Green);
+                    }
+                    else
+                    {
+                        showResult("Invalid Password", Color.Red);
+                    }
                 }
                 else
                 {
-                    showResult("Invalid Password", Color.Red);
+                    showResult("Email does not exist", Color.Red);
                 }
-            }
-            else
-            {
-                showResult("Email does not exist", Color.Red);
-            }
+            }  
         }
 
         private void showResult(string str, Color color)
